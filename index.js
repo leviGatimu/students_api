@@ -34,3 +34,8 @@ const students = [
 app.get("/students", (req, res) => {
     res.json(students);
 });
+app.post("/students", (req, res) => {
+    const student = req.body;
+    students.push(student);
+    res.json(students);
+});
